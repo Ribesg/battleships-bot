@@ -44,7 +44,7 @@ if (input.cmd == "init") {
 	console.log(JSON.stringify(config));
 } else {
 	var i = 0;
-	while (moves[i] in input.hit || moves[i] in input.missed) {
+	while (input.hit.indexOf(moves[i]) > -1 || input.missed.indexOf(moves[i]) > -1) {
 		i++;
 	}
 	console.log(JSON.stringify({
